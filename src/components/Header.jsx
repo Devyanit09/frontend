@@ -1,0 +1,24 @@
+import {Link} from 'react-router-dom';
+
+export default function Header({
+    heading,
+    paragraph,
+    linkName,
+    linkUrl="#"
+}){
+    return(
+        <div className="mb-10">
+            <div className="flex justify-center">
+            </div>
+            <h2 className="mt-2 my-1 text-center text-3xl font-extrabold text-gray-900">
+                {heading}
+            </h2>
+            <p className="mt-4 text-center text-sm text-gray-600 mt-4">
+            {paragraph} {' '}
+            <Link to={linkUrl} className="font-medium text-blue-600 hover:text-blue-500">
+                {linkName}
+            </Link>
+            </p>
+        </div>
+    )
+}
